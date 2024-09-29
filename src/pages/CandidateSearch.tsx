@@ -105,22 +105,31 @@ const CandidateSearch = () => {
   const handleNext = () => {
     // Move to the next candidate if there are more
     if (currentIndex <= candidateList.length - 1) {
-      console.log(`Current index: ${currentIndex+1} | Candidate list length: ${candidateList.length}`);
       setCurrentIndex(currentIndex + 1);
     }
   };
 
   const handleSave = () => {
     // Save current candidate's properties to localStorage
+    let localstorage = localStorage.getItem('savedCandidates');
     const candidateToSave = candidateList[currentIndex];
-    localStorage.setItem('savedCandidate', JSON.stringify(candidateToSave));
+    if (localstorage) {
+      let savedCandidates = JSON.parse(localstorage);
+      savedCandidates.push(candidateToSave);
+      localStorage.setItem('savedCandidates', JSON.stringify(savedCandidates));
+    } else {
+      localStorage.setItem('savedCandidates', JSON.stringify([candidateToSave]));
+    }
     alert("Candidate saved to localStorage!"); // Optional: Provide user feedback
+    if (currentIndex <= candidateList.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+    }
   };
 
   // Render loading, error, or current candidate
   return (
     <>
-      <h1>CandidateSearch</h1>
+      <h1>Candidate Search</h1>
       {loading ? (
         <p className='loading'>Loading...</p>
       ) : error ? (
@@ -135,7 +144,7 @@ const CandidateSearch = () => {
           <div className="info">
             <h2>{candidateList[currentIndex].login || "Unknown"}</h2>
             <p>Location: {candidateList[currentIndex].location || "Unknown"}</p>
-            <p>Email: {candidateList[currentIndex].email || "Not available"}</p>
+            <p>Email: {candidateList[currentIndex].email || "N/A"}</p>
             <p>Company: {candidateList[currentIndex].company || "N/A"}</p>
             <p>Bio: {candidateList[currentIndex].bio || "N/A"}</p>
           </div>
