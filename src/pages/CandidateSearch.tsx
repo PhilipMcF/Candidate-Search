@@ -131,7 +131,9 @@ const CandidateSearch = () => {
     <>
       <h1>Candidate Search</h1>
       {loading ? (
-        <p className='loading'>Loading...</p>
+        <div className='loading-div'>
+          <div className='loading-circle'/>
+        </div>
       ) : error ? (
         <p>{error}</p>
       ) : currentIndex <= candidateList.length-1 ? (
