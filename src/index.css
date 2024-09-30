@@ -187,3 +187,20 @@ tbody tr:nth-child(odd) {
   align-items: center;
   height: 50vh;
 }
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.nextButton {
+  /* margin-left: 100px; */
+  background: red;
+  /* justify-content: start; */
+}
+
+.addButton {
+  background: green;
+  margin-left: auto;
+  /* justify-content: end; */
+}
