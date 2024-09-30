@@ -65,7 +65,7 @@ const CandidateSearch = () => {
     } else {
       localStorage.setItem('savedCandidates', JSON.stringify([candidateToSave]));
     }
-    alert("Candidate saved to localStorage!"); // Optional: Provide user feedback
+    alert("Candidate saved! View in Potential Candidates page..."); // Optional: Provide user feedback
     if (currentIndex <= candidateList.length - 1) {
       setCurrentIndex(currentIndex + 1);
     }
