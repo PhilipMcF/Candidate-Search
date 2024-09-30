@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { searchGithub } from '../api/API';
 import { searchGithubUser } from '../api/API';
 import { Candidate } from '../interfaces/Candidate.interface';
-//test
+
 async function main() {
   try {
     const candidates = await searchGithub();
