@@ -84,7 +84,7 @@ const CandidateSearch = () => {
       ) : currentIndex <= candidateList.length-1 ? (
         <div className="card">
           <img
-            src={candidateList[currentIndex].avatar_url || "https://via.placeholder.com/420"}
+            src={candidateList[currentIndex].avatar_url}
             alt="Avatar"
             className="avatar"
           />
