@@ -1,33 +1,54 @@
-# React + TypeScript + Vite
+# Candidate Search
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)
+## Description
+Project that calls the GitHub API and fetchs data about users. You are able to add the presented user as a potential candidate that is saved to localStorage.<br>
+A table/list of saved potential candidates can be viewed in a seperate page and can be removed with the reject button.<br>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Technologies used:<br>
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Questions](#questions)
+- [License](#license)
 
-* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md), which uses [Babel](https://babeljs.io/) for Fast Refresh
-* [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc), which uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
 
-## Expanding the ESLint configuration
+- The user must clone the repo locally with this command:
+```bash
+git clone https://github.com/PhilipMcF/Candidate-Search.git
+```
+- Node.JS will be needed as well as the package manager to acquire the necessary modules:<br>
+https://nodejs.org/en/download/package-manager
 
-If you're developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-* Configure the top-level `parserOptions` property as follows:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+- Npm modules are needed in order to function properly so they will need to be installed. Run this command in the directory where the repo is installed:
+```bash
+npm install
 ```
 
-* Replace `plugin:@typescript-eslint/recommended` with `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`.
-* Optionally, add `plugin:@typescript-eslint/stylistic-type-checked`.
-* Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` and `plugin:react/jsx-runtime` to the `extends` list.
+## Usage
 
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+[Click here to visit deployed site!](https://candidate-search-3osw.onrender.com)
+
+To start the project, make sure you are in the directory of the repo/project and run this command in a terminal window:
+```bash
+npm run build && npm run dev
+```
+
+## Contributing
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://www.contributor-covenant.org/version/2/1/code_of_conduct/)<br>
+To contribute to this project, you can fork it or create an issue and provide any suggestions or solutions.
+Please try and follow the Contributor Covenant code of conduct and leave a star if you like the project.
+
+## Questions
+For any and all questions, please contact me here:
+- GitHub: https://github.com/PhilipMcF
+- Email: philipsm1998@gmail.com
+
+## License
+[This project is licensed under the MIT license.](#https://opensource.org/license/mit)
