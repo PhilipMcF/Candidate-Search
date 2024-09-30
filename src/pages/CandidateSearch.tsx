@@ -19,7 +19,7 @@ async function main() {
     return potentialCandidates;
   } catch (error) {
     console.error("Error fetching candidates:", error);
-    return []; // Return an empty array in case of error
+    return [];
   }
 }
 
@@ -27,7 +27,7 @@ const CandidateSearch = () => {
   const [candidateList, setCandidateList] = useState<Candidate[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [currentIndex, setCurrentIndex] = useState(0); // State for current candidate index
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -65,13 +65,13 @@ const CandidateSearch = () => {
     } else {
       localStorage.setItem('savedCandidates', JSON.stringify([candidateToSave]));
     }
-    alert("Candidate saved! View in Potential Candidates page..."); // Optional: Provide user feedback
+    alert("Candidate saved! View in Potential Candidates page...");
     if (currentIndex <= candidateList.length - 1) {
       setCurrentIndex(currentIndex + 1);
     }
   };
 
-  // Render loading, error, or current candidate
+  
   return (
     <>
       <h1>Candidate Search</h1>
