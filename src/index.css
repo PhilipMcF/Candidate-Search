@@ -120,8 +120,33 @@ tbody tr:nth-child(odd) {
 }
 
 .table {
+  margin-top: 20px;
   width: 80vw;
   table-layout: fixed;
+}
+
+.tableImage {
+  text-align: center;
+}
+
+.tableAvatar {
+  vertical-align: middle;
+  width: 50%;
+  height: 50%;
+  border-radius: 15%;
+}
+
+.tableRejectButton {
+  text-align: center;
+}
+
+.rejectButton {
+  width: 75px;
+  height: 75px;
+  background: red;
+  font-size: 24px;
+  border-radius: 50%;
+  text-align: center;
 }
 
 /* Candidate Card */
