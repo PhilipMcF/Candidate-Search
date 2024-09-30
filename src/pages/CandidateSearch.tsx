@@ -151,10 +151,10 @@ const CandidateSearch = () => {
             <p>Bio: {candidateList[currentIndex].bio || "N/A"}</p>
           </div>
           <div className="buttons">
-            <button onClick={handleNext}>
+            <button className="nextButton" onClick={handleNext}>
               -
             </button>
-            <button onClick={handleSave}>
+            <button className="addButton" onClick={handleSave}>
               +
             </button>
           </div>
